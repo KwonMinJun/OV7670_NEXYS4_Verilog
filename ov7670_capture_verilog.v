@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module ov7670_capture_verilog(input pclk,
+module ov7670_capture_verilog(input pclk, //ㅇㅇ
                               input vsync,
                               input href,
                               input [7:0] d,
@@ -33,7 +33,7 @@ module ov7670_capture_verilog(input pclk,
                     dout_temp <= {d_latch[15:12],d_latch[10:7],d_latch[4:1]};
                     address <= address_next;
                     we_temp <= wr_hold[1];
-                    wr_hold <= {wr_hold[0], (href && !wr_hold[0])};
+                    wrㅇ_hold <= {wr_hold[0], (href && !wr_hold[0])};
                     d_latch <= {d_latch [7:0], d};
                     
                     if(wr_hold[1] == 1)
